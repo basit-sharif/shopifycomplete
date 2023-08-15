@@ -1,7 +1,7 @@
 
 const Products = ({ products }: any) => {
-    async function handleAddCart(productId: string) {
-
+    function handleAddCart(productId: string) {
+        console.log("how are you")
     }
     return (
         <div className="space-y-6">
@@ -11,7 +11,7 @@ const Products = ({ products }: any) => {
                     <p>Handle: {item.node.handle}</p>
                     <p>Description: {item.node.description}</p>
                     <p>Id: {item.node.id}</p>
-                    <button className="border-2 shadow-md" onClick={handleAddCart}>Add to Cart</button>
+                    <button className="border-2 shadow-md" onClick={() => handleAddCart(item.node.id)} >Add to Cart</button>
                 </div>
             ))}
         </div>
