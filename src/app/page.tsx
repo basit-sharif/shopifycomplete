@@ -1,6 +1,6 @@
 import Products from "@/components/views/Products";
 
-export const fetchProductsData = async () => {
+const fetchProductsData = async () => {
   try {
     const response = await fetch('https://4de724-2.myshopify.com/api/2023-07/graphql.json', {
       method: 'POST',
